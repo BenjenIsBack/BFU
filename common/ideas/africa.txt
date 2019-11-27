@@ -1,0 +1,134 @@
+ideas = {
+	country = {
+		op_crusader = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via decision
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			modifier = {
+			army_armor_attack_factor = 0.25
+				army_org_factor = 0.25
+				army_morale_factor = 0.25
+				army_speed_factor = 0.05
+			 
+			}
+
+		}
+		
+		op_husky = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via decision
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_morale_bonus
+			modifier = {
+			  air_cas_present_factor = 0.4
+				 army_bonus_air_superiority_factor = 0.20
+				special_forces_attack_factor = 0.25
+				amphibious_invasion = 0.8
+				invasion_preparation = -0.8
+				 
+				 
+				terrain_penalty_reduction = 0.25
+			 
+			}
+
+		}
+		cost_africa = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			modifier = {
+			  consumer_goods_factor = 0.05
+			 
+			}
+
+		}
+		cost_med = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			modifier = {
+			  consumer_goods_factor = 0.05
+			 
+			}
+
+		}
+		cost_jordan = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			modifier = {
+			  consumer_goods_factor = 0.05
+			 
+			}
+
+		}
+		cost_rubber = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			modifier = {
+			  consumer_goods_factor = 0.05
+			 
+			}
+
+		}
+		cost_singapore = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			modifier = {
+			  consumer_goods_factor = 0.05
+			 
+			}
+
+		}
+	}
+}

@@ -1,0 +1,80 @@
+﻿###########################
+# Brazil Events
+###########################
+
+add_namespace = brazil
+
+# Plan Cohen Conspiracy
+country_event = {
+	id = brazil.1
+	title = brazil.1.t #Plan Cohen#
+	desc = brazil.1.d # 
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # We must show this evil conspiracy to the people
+		name = brazil.1.a
+		add_ideas = {
+		Conservative_Backlash 
+			}
+		}
+	}
+
+#POLACA 1 #BANIR OS OUTROS PARTIDOS#
+country_event = { 
+	id = brazil.2
+	title = brazil.2.t #Democracy at Stake#
+	desc = brazil.2.d #After the unveiling of the Cohen plan many are asking themselves if democracy is worth preserving or if it will only lead to our downfall. Should we ban all of the political parties or just those that have shown their claws and thirst for power at the expense of innocent blood?#
+	picture =  GFX_report_event_gathering_protest 
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #BANIR TODOS OS PARTIDOS#
+		name = brazil.2.a 
+		add_popularity = {
+		ideology = neutrality
+		popularity = .2 }
+		add_stability = -0.05
+		add_political_power = -50
+		country_event = brazil.3
+		}
+		
+		option = { #BANIR APENAS COMUNISTAS E SIMPATIZANTES#
+		name = brazil.2.b
+		set_political_party = {
+		ideology = communism
+		popularity = 0 }
+		add_stability = 0.025
+		add_political_power = -30
+		country_event = brazil.3
+		}
+	}
+	
+#POLACA 2 #ALISTAMENTO
+	country_event = { 
+	id = brazil.3
+	title = brazil.3.t
+	desc = brazil.3.d
+	picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #ALISTAMENTO OBRIGATÓRIO#
+		name = brazil.3.a
+		add_ideas = {
+			Alistamento_Obrigatorio }
+		add_political_power = -50
+		}
+		
+	option = { #ALISTAMENTO NÃO OBRIGATÓRIO#
+		name = brazil.3.b
+		add_political_power = 70
+		add_stability = 0.025
+		
+	
+	}
+}

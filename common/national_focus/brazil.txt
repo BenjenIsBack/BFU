@@ -1,0 +1,12 @@
+focus_tree = {
+	id = Brazilian_Focus_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = BRA
+		}
+	}
+	default = no
+	
+}

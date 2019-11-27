@@ -1,0 +1,12 @@
+focus_tree = {
+	id = Swiss_Focus_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = SWI
+		}
+	}
+	default = no
+	
+}

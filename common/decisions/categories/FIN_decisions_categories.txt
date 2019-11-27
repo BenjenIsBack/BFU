@@ -1,0 +1,11 @@
+FIN_sisu = {
+	allowed = {
+		original_tag = FIN
+	}
+	available = {
+		GER = {
+			has_war_with = SOV
+		}
+	}
+
+}

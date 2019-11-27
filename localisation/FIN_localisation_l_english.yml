@@ -1,0 +1,58 @@
+﻿l_english:
+
+
+ #IDEAS#
+ban_communism:0 "Ban on Communist parties"
+lotta_svard:0 "Lotta Svärd"
+molotov_coctail:0 "Molotov coctails"
+motti_tactics:0 "Motti tactics"
+ski_troops:0 "Ski troops"
+winter_cloth:0 "Winter clothing"
+ 
+ #FOCUS#
+finland_stability:0 "Unify the country"
+p1:0 "Ban communist parties"
+p2:0 "Look towards Nordic countries"
+p3:0 "Lotta svärd"
+i1:0 "Agriculture reform"
+i2:0 "Modern tools"
+i3:0 "Improve industry"
+i4:0 "Expand nothern steel mines"
+i5:0 "Expand nothern tungsten mines"
+i6:0 "Extra research slot"
+i7:0 "Improve the roads"
+i8:0 "Newer electronics"
+i9:0 "New small arm plants"
+i10:0 "Extra research slot 2"
+
+m1:0 "Invite civil war hero back"
+m2:0 "Expand Mannerheim line"
+m3:0 "Tikkakoski improving small arms"
+m4:0 "Artillery improvment"
+m5:0 "Winter clothing"
+m6:0 "Motti tactics"
+m7:0 "Frontline supporting"
+m8:0 "Finnish secret weapons"
+m9:0 "New equipment to build trenches"
+m10:0 "Reverse engineer leased tanks"
+
+A1:0 "Fortify cities against bombing" 
+A2:0 "Improve old fighters"
+A3:0 "Practice air combat"
+A4:0 "Navy aviation"
+
+N1:0 "Improve Turku dockyards"
+N2:0 "Repair tzar time naval forts"
+N3:0 "Improve our heavy cruisers"
+N4:0 "Large navy tactics"
+N5:0 "Vesikko class submarine"
+N6:0 "Convoy raiding tactics"
+N7:0 "More dockyards"
+ #EVENTS#
+ 
+ 
+ 
+ #DECISIONS#
+FIN_sisu:0 "Sisu"
+FIN_get_sisu:0 "Sisu"
+

@@ -1,0 +1,1308 @@
+focus_tree = {
+	id = phi_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1000
+			tag = PHI
+
+		}
+	}
+
+	focus = {
+		id = PHI_The_1935_Constitution
+		icon = GFX_focus_generic_treaty
+		x = 10
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = PHI_Follow_the_American_Model
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = PHI_The_1935_Constitution}
+		x = 9
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = phi_liberalism
+		}
+	}
+
+	focus = {
+		id = PHI_Stabalize_the_Commonwealth
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = PHI_Follow_the_American_Model}
+		x = 8
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unstable_country 
+				add_idea = phi_almoststablecountry
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Establishing_a_New_Congress
+		icon = GFX_goal_generic_consitution
+		prerequisite = { focus = PHI_Stabalize_the_Commonwealth}
+		available = {
+			if = {
+				#limit = { has_dlc = Together for Victory }
+				OR = {
+					AND = {
+						date > 1939.01.01
+					}
+				}
+			}
+		} #Stabalizes the Colony Completly
+		x = 8
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+			completion_reward = {
+				remove_ideas = { phi_almoststablecountry
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Birth_of_the_New_Republic
+		icon = GFX_goal_generic_liberty
+		prerequisite = { focus = PHI_Establishing_a_New_Congress}
+		available = {
+			if = {
+				#limit = { has_dlc = Together for Victory }
+				OR = {
+					AND = {
+						date > 1941.07.04
+					}
+				}
+			}
+		} #Liberation of the Colony
+		x = 8
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			if = {
+				#limit = { has_dlc = Together for Victory }
+				USA = {
+					set_autonomy = {
+						target = PHI
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Industry_Inovations
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = PHI_The_1935_Constitution}
+		x = 11
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAN_dollar_a_year_men
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Brilliant_Minds
+		icon = GFX_goal_generic_supremacy_of_will
+		prerequisite = { focus = PHI_Industry_Inovations}
+		prerequisite = { focus = PHI_Follow_the_American_Model}
+		x = 10
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = brilliant_minds
+		}
+	}
+
+	focus = {
+		id = PHI_Construction_Progress
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = PHI_Brilliant_Minds}
+		x = 10
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Philippine_Industrial_Might
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = PHI_Construction_Progress}
+		x = 10
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = brilliant_minds
+				add_idea = democratic_industrial_progress
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Mining_Extracting
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = PHI_Industry_Inovations}
+		x = 14
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Improving_Mining_Extracting
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = PHI_Mining_Extracting}
+		x = 14
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = phi_mining_boost
+		}
+	}
+
+	focus = {
+		id = PHI_Strengthen_the_Coconut_Industry
+		icon =  GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PHI_Industry_Inovations}
+		x = 12
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		completion_reward = {
+			327 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				#set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Railroad_Expansion_Act
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PHI_Strengthen_the_Coconut_Industry}
+		x = 12
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				
+				623 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				
+				627 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				} 
+			
+				327 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				} 
+			
+		}
+	}
+
+	focus = {
+		id = PHI_Upgrading_Industry_Production
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = PHI_Railroad_Expansion_Act}
+		x = 12
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = phi_upgradedproduction
+		}
+	}
+
+	focus = {
+		id = PHI_Creating_Local_Businesses
+		icon = GFX_goal_generic_agriculture
+		prerequisite = { focus = PHI_Railroad_Expansion_Act}
+		x = 14
+		y = 4
+		cost = 10
+		available = {
+			NOT = { has_idea = unstable_country }
+			NOT = { has_idea = phi_almoststablecountry }
+		}
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			623 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = PHI_Further_Industrial_Opportunities
+		icon =  GFX_focus_generic_industry_3
+		prerequisite = { focus = PHI_Creating_Local_Businesses}
+		x = 14
+		y = 5
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			627 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_American_Civilan_Industry_Support
+		icon = GFX_goal_generic_banking
+		prerequisite = { focus = PHI_Further_Industrial_Opportunities}
+		mutually_exclusive = { focus = PHI_American_Military_Industry_Support }
+
+		x = 14
+		y = 6
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			625 = {
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_New_Military_Complex
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PHI_Creating_Local_Businesses}
+		x = 16
+		y = 5
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			625 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_American_Military_Industry_Support
+		icon = GFX_goal_generic_construct_war_factory
+		prerequisite = { focus = PHI_New_Military_Complex}
+		mutually_exclusive = { focus = PHI_American_Civilan_Industry_Support }
+		x = 16
+		y = 6
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			625 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+#Army Focus
+	focus = {
+		id = PHI_National_Defense_Act_of_1935
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 2
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 30
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = PHI_Motor_Research
+		icon = GFX_goal_generic_modernizing_the_cavalry
+		prerequisite = { focus = PHI_National_Defense_Act_of_1935}
+		x = 4
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_army_motorization
+				bonus = 1.00
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Special_Forces
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = PHI_Engineer_Research}
+		x = 0
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				technology = marines2
+				technology = marines3
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_New_Infantry_Equipment
+		icon = GFX_goal_generic_proving_grounds
+		prerequisite = { focus = PHI_National_Defense_Act_of_1935}
+		x = 2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Artillery_Research
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = PHI_New_Infantry_Equipment}
+		x = 2
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Engineer_Research
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = PHI_National_Defense_Act_of_1935}
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Recruitment_Expansion
+		icon = GFX_goal_generic_recruitment
+		prerequisite = { focus = PHI_Military_Research}
+		prerequisite = { focus = PHI_Stabalize_the_Commonwealth}
+		x = 6
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = radical_movements
+			add_ideas = phi_recruitmentexpansion
+		}
+	}
+
+	focus = {
+		id = PHI_Freedom_Never_Dies
+		icon = GFX_goal_FRA_victor
+		prerequisite = { focus = PHI_Recruitment_Expansion }
+		prerequisite = { focus = PHI_Shield_of_Democracy }
+		x = 6
+		y = 5
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = freedom_never_dies
+		}
+	}
+
+	focus = {
+		id = PHI_Organizing_the_Army
+		icon = GFX_goal_generic_plan
+		prerequisite = { focus = PHI_Military_Research }
+		x = 4
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Mountain_Training
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = PHI_Special_Forces }
+		mutually_exclusive = { focus = PHI_Jungler_Training }
+
+		x = 0
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RAJ_revive_the_screw_guns_effect
+			hidden_effect = { set_technology = { mountain_gun = 1 } }
+		}
+	}
+
+	focus = {
+		id = PHI_Jungler_Training
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PHI_Special_Forces }
+		mutually_exclusive = { focus = PHI_Mountain_Training }
+		x = 2
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jungle_training_effect
+			hidden_effect = { set_technology = { jungle_warfare = 1 } }
+		}
+	}
+
+		focus = {
+		id = PHI_Military_Research
+		icon = GFX_goal_generic_silver_research
+		prerequisite = { focus = PHI_Motor_Research }
+		x = 4
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = PHI_Army_Workers
+		icon = GFX_goal_generic_power_plant
+		prerequisite = { focus = PHI_Follow_the_American_Model}
+		prerequisite = { focus = PHI_Motor_Research}
+		x = 6
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = army_works
+		}
+	}
+
+	focus = {
+		id = PHI_Tank_Research
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PHI_Organizing_the_Army }
+		x = 3
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Shield_of_Democracy
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PHI_Organizing_the_Army }
+		x = 5
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = shielding_democracy
+		}
+	}
+
+	focus = {
+		id = PHI_Independent_Innovative_Research
+		icon = GFX_focus_research
+		prerequisite = { focus = PHI_Birth_of_the_New_Republic}
+		prerequisite = { focus = PHI_Upgrading_Industry_Production }
+		prerequisite = { focus = PHI_Philippine_Industrial_Might }
+		x = 10
+		y = 5
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		available = {
+			is_subject = no
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+#Navy Focus
+	focus = {
+		id = PHI_Naval_Expansion
+		icon = GFX_goal_generic_build_navy
+		x = 20
+		y = 0
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			327 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 10265
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Focus_on_Destroyers
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = PHI_Naval_Expansion}
+		mutually_exclusive = { focus = PHI_Focus_on_Submarines }
+		x = 19
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+			#1x 50% research bonus for Destroyers
+		}
+	}
+
+	focus = {
+		id = PHI_Naval_Training
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus =  PHI_Focus_on_Destroyers
+		focus = PHI_Focus_on_Submarines }
+		x = 20
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_modernizing_navy
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Focus_on_Submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = PHI_Naval_Expansion}
+		mutually_exclusive = { focus = PHI_Focus_on_Destroyers }
+		x = 21
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+			#1x 50% research bonus for Destroyers
+		}
+	}
+
+	focus = {
+		id = PHI_Submarine_Production
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = PHI_Focus_on_Submarines}
+		x = 22
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = phi_submarine_production
+		}
+	}
+
+	focus = {
+		id = PHI_Destroyer_Production
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = PHI_Focus_on_Destroyers}
+		x = 18
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = escort_effort_focus
+		}
+	}
+
+		focus = {
+		id = PHI_Dockyard_Expansion
+		icon = GFX_goal_generic_navy_funding
+		prerequisite = { focus = PHI_Destroyer_Production
+		focus = PHI_Submarine_Production }
+		prerequisite = { focus = PHI_Naval_Training }
+		x = 20
+		y = 3
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			327 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = PHI_expand_manilla_dock
+				if = {
+					limit = { state = 327 }
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 10265`
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Amphibious_Warfare
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = PHI_Dockyard_Expansion }
+		x = 20
+		y = 4
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = uk_amphibious_focus
+				bonus = 1.0
+				uses = 2
+				category = tp_tech
+			}
+		}
+	}
+#Air Focus
+	focus = {
+		id = PHI_Air_Armament
+		icon = GFX_goal_generic_build_airforce
+		x = 27
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = FRA_fighter_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Air_Support
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PHI_Air_Armament }
+		mutually_exclusive = { focus = PHI_Tactical_Bombing }
+		x = 26
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_effort
+				uses = 2
+				bonus = 1.0
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = PHI_Tactical_Bombing
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = PHI_Air_Armament }
+		mutually_exclusive = { focus = PHI_Air_Support }
+		x = 28
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_TAC
+				uses = 2
+				bonus = 1.0
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Tactical_Bombing_Tactics
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = PHI_Tactical_Bombing }
+		x = 29
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = phi_tactical_production
+		}
+	}
+
+	focus = {
+		id = PHI_Air_Support_Tactics
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = PHI_Air_Support }
+		x = 25
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = phi_cas_production
+		}
+	}
+
+	focus = {
+		id = PHI_Air_Training
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = PHI_Tactical_Bombing
+		focus = PHI_Air_Support }
+		x = 27
+		y = 2
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = FRA_air_doctrine
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+
+	focus = {
+		id = PHI_Para_Troopers
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = PHI_Air_Support_Tactics
+		focus = PHI_Tactical_Bombing_Tactics }
+		prerequisite = { focus = PHI_Air_Training}
+		x = 26
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Upgrading_Manila_Air_Base
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = PHI_Air_Support_Tactics
+		focus = PHI_Tactical_Bombing_Tactics }
+		prerequisite = { focus = PHI_Air_Training}
+		x = 28
+		y = 3
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			327 = {
+				
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				#set_state_flag = air_rearmament_focus_2AirBase
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PHI_Radar_Detection
+		icon = GFX_goal_generic_radio_development_2
+		prerequisite = { focus = PHI_Upgrading_Manila_Air_Base focus = PHI_Para_Troopers }
+		x = 27
+		y = 4
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available = {
+			has_tech = radio
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = PHI_volunteer_air_observers_corps
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+			327 = {
+				
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			627 = {
+				
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = PHI_volunteer_air_observers_corps
+				bonus = 1.0
+				uses = 1
+				category = radar_tech
+			}
+
+
+			327 = {
+				
+					
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+
+			627 = {	
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+					
+			}
+		}
+	}
+}

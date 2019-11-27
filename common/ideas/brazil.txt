@@ -1,0 +1,504 @@
+ideas = {
+
+	country = {
+	
+		Civil_War_1932 = {
+
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = anti_soviet_pact
+			
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.05
+			}
+			
+			
+		}
+
+	Election_Year = { 
+ 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_power_cost = 0.10
+				neutrality_drift = 0.05
+			}
+ 	}
+
+		D_I_P = {
+ 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_secret_police
+			
+			modifier = {
+				political_power_gain = 0.05
+				neutrality_drift = 0.10
+			}
+ 	}
+
+	Foreign_Capital = {
+ 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+ 	}
+
+	Alistamento_Obrigatorio = {
+ 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				conscription = 0.01 
+			}
+ }
+
+	Conservative_Backlash = {
+ 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				communism_acceptance = 0
+				communism_drift = -0.1
+			}
+ 	}
+
+	Healing_Wounds = {
+ 
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = anti_soviet_pact
+			
+			modifier = {
+				political_power_cost = 0.05
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				stability_factor = -0.10
+				
+			}
+ }
+
+	Red_Spectre = {
+ 
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_communist_army
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_cost = 0.05
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+ }
+
+	Bridging_The_Brazilian_Archipelago = {
+ 	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			picture = generic_build_infrastructure
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+
+	}
+
+	Merchant_Navy = {
+ 
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			
+			picture = generic_coastal_navy
+			
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+ }
+
+	Dumonts_Legacy = {
+ 
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_air_bonus
+			
+			removal_cost = -1
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+ 
+	}
+	
+	}
+
+	political_advisor = {
+
+		BRA_washington_luis_pereira = {
+
+			picture = generic_political_advisor_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		BRA_osvaldo_aranha = {
+
+			picture = generic_political_advisor_south_america_2
+				
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		BRA_afranio_de_mello_franco = {
+
+			picture = generic_political_advisor_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { popular_figurehead }
+		}
+	}
+
+	theorist = {
+
+		BRA_newton_cavalcanti = {
+					
+			picture = generic_army_south_america_1
+
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+
+		BRA_eduardo_gomes = {
+					
+			picture = generic_political_advisor_south_america_1
+				
+			allowed = {
+				original_tag = BRA
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+		jose_pessoa = {
+
+			picture = "idea_jose_pessoa.dds"
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_epaminondas_dos_santos = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_agliberto_vieira = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_artur_da_costa_e_silva = {
+
+			picture = generic_army_south_america_4
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_moreira_lima = {
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		
+	}
+	# MILITARY
+	army_chief = {
+
+		BRA_joao_neves_da_fontoura = {
+			
+			picture = generic_army_south_america_5
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_nero_fiuza_de_castro = {
+			
+			picture = generic_army_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		
+
+		BRA_salgado_filho = {
+			
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_ismael_motta_paes = {
+			
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		BRA_aristides_guilhem = {
+			
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_jorge_martins = {
+			
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BRA_floriano_peixoto = {
+			
+			picture = generic_navy_south_america_3
+			
+			allowed = {
+				original_tag = BRA
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,14 @@
+FIN_sisu = {
+	FIN_get_sisu = {
+		icon = generic_independence
+
+		allowed = {
+			original_tag = FIN
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			add_ideas = sisu
+		}
+	}
+}

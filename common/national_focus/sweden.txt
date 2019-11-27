@@ -1,0 +1,12 @@
+focus_tree = {
+	id = Swedish_Focus_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = SWE
+		}
+	}
+	default = no
+	
+}

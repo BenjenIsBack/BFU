@@ -1,0 +1,28 @@
+ideas = {
+
+	country = {
+
+		turkroach = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+
+			modifier = {
+            			enemy_justify_war_goal_time = 5.0
+				join_faction_tension = 2.00
+				lend_lease_tension = 2.00
+				send_volunteers_tension = 2.00
+				political_power_gain = -2
+				ai_get_ally_desire_factor = -100 
+			}
+		}
+}
