@@ -54,7 +54,7 @@ buildings = {
 		show_on_map = 1
 		show_on_map_meshes = 3
 		always_shown = yes
-		base_cost = 3000
+		base_cost = 2000
 		provincial = yes
 		only_costal = yes
 		is_port = yes
@@ -135,7 +135,7 @@ buildings = {
 
 	fuel_silo = {
 		show_on_map = 1
-		base_cost = 5000
+		base_cost = 4000
 		icon_frame = 14
 		#max_level = 1
 		shares_slots = yes
@@ -149,7 +149,7 @@ buildings = {
 
 	radar_station = {
 		show_on_map = 1
-		base_cost = 3375
+		base_cost = 3400
 		icon_frame = 11
 		radar = yes
 		#max_level = 0 # max: 5
@@ -160,7 +160,7 @@ buildings = {
 
 	rocket_site = {
 		show_on_map = 1
-		base_cost = 6400
+		base_cost = 8000
 		icon_frame = 12
 		rocket_production = 5
 		rocket_launch_capacity = 1
@@ -172,7 +172,7 @@ buildings = {
 
 	nuclear_reactor = {
 		show_on_map = 1
-		base_cost = 30000
+		base_cost = 50000
 		icon_frame = 13
 		nuclear_reactor = yes
 		nuclear_production_factor = 1
