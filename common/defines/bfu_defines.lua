@@ -1,6 +1,6 @@
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 240 --was 50
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 240 --was 50
-NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --was 36
+NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36 --was 36
 
 NDefines.NDiplomacy.DIPLOMACY_REQUEST_EXPIRY_DAYS = 7 --was 30
 NDefines.NDiplomacy.TRUCE_PERIOD_AFTER_KICKING_FROM_FACTION = 0 --was 0
