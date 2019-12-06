@@ -15,6 +15,22 @@ set_technology = {
 	CAS1 = 1
 	
 }
+
+add_opinion_modifier = { target = GER modifier = embargo }
+add_opinion_modifier = { target = ITA modifier = embargo }
+add_opinion_modifier = { target = ROM modifier = embargo }
+add_opinion_modifier = { target = BUL modifier = embargo }
+add_opinion_modifier = { target = HUN modifier = embargo }
+add_opinion_modifier = { target = JAP modifier = embargo }
+
+
+add_opinion_modifier = { target = GER modifier = large_decrease }
+add_opinion_modifier = { target = ITA modifier = large_decrease }
+add_opinion_modifier = { target = ROM modifier = large_decrease }
+add_opinion_modifier = { target = BUL modifier = large_decrease }
+add_opinion_modifier = { target = HUN modifier = large_decrease }
+add_opinion_modifier = { target = JAP modifier = large_decrease }
+
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns"}

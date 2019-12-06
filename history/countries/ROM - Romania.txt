@@ -28,6 +28,8 @@ set_technology = {
 	early_fighter = 1
 }
 
+
+
 add_opinion_modifier = { target = NOR modifier = embargo }
 add_opinion_modifier = { target = DEN modifier = embargo }
 add_opinion_modifier = { target = POL modifier = embargo }
