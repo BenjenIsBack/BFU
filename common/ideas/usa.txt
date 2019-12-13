@@ -250,7 +250,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				special_forces_cap = 1
+				special_forces_cap = 3
 			}
 		}
 		USA_womens_armed_service_integration_act = {

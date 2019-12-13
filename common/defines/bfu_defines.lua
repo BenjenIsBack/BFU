@@ -36,7 +36,8 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.15 --was 0.15
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 84 --was 60
 NDefines.NCountry.PARADROP_AIR_SUPERIORITY_RATIO = 0.9 --was 0.7
 
-NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10 --was 10
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 20 --was 5
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 20 -- was 10
 NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0 --was 0.25
 NDefines.NProduction.ANNEX_FUEL_RATIO = 1.0 --was 0.25
 NDefines.NProduction.ANNEX_CONVOYS_RATIO = 1.0 --was 0.25
@@ -77,6 +78,8 @@ NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 4 --was 24
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.2 --was -0.15
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.3 --was -0.3
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40 --was -0.40
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.65	-- more AA attack will approach this amount of help (diminishing returns)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 224 -- how quickly defense approaches the max impact diminishing returns curve
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 --was 2
 NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 156.0 --was 62.0
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.2, 0.3, 0.4, 0.5 } --was vanilla
@@ -120,6 +123,8 @@ NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018 --was
 NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 0 --was 300
 NDefines.NAir.DISRUPTION_FACTOR = 5.0 --was 4.0
 NDefines.NAir.ESCORT_FACTOR = 2.5 --was 2.0
+NDefines.NAir.AIR_NAVAL_KAMIKAZE_DAMAGE_MULT = 40.0 -- Balancing value to increase usual damage to Strength for Kamikaze
+NDefines.NAir.AIR_NAVAL_KAMIKAZE_LOSSES_MULT = 1.0  -- Balancing value to increase usual losses if Kamikaze participating in the battle
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
 		0.0, -- AIR_SUPERIORITY
 		0.0, -- CAS		
@@ -151,9 +156,9 @@ NDefines.NAir.MISSION_FUEL_COSTS = {  -- fuel cost per plane for each mission
 		1.0, -- NAVAL_MINES_SWEEPING
 	}
 
-NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.15 --was 0.15
-NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.1 --was 0.1
-NDefines.NNavy.ANTI_AIR_TARGETING = 0.7 --was 0.7
+NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.10 --was 0.15
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.05 --was 0.1
+NDefines.NNavy.ANTI_AIR_TARGETING = 0.65 --was 0.7
 NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.4 --was 0.4
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE	= 0.15 --was 0.15
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.2 --was 0.2

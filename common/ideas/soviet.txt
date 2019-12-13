@@ -200,16 +200,11 @@ ideas = {
 			}
 			
 			modifier = {
-				drift_defence_factor = 0.5						
+				drift_defence_factor = 0.5		
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
 			}
-			equipment_bonus = {
-				fighter_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				armor = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
+			
 		}
 
 		trotskyite_plot = {

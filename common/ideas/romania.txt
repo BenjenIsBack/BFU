@@ -637,7 +637,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.07
-				special_forces_cap = 1
+				special_forces_cap = 3
 			}
 		}
 

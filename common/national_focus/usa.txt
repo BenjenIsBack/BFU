@@ -2131,7 +2131,13 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			} # REVISIT May use modifier?
-			add_ideas = air_war_plans_division_focus
+			add_tech_bonus = {
+				name = usa_fighters
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+				
+			}
 		}
 	}
 
@@ -2152,7 +2158,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 75
-			add_ideas = air_support_focus
+			
 		}
 	}
 

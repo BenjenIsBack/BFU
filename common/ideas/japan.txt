@@ -711,7 +711,7 @@ ideas = {
 			picture = generic_naval_manufacturer_1
 			
 			modifier = {
-				special_forces_cap = 1
+				special_forces_cap = 3
 			}
 		}
 
@@ -1208,16 +1208,16 @@ ideas = {
 
 			equipment_bonus = {
 				cv_fighter_equipment = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				cv_CAS_equipment = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				cv_nav_bomber_equipment = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				nav_bomber_equipment = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
